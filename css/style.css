@@ -8,7 +8,7 @@ body {
 
 .container {
     display: grid;
-    grid-template-rows: 1fr 1fr 5fr 1fr 1fr;
+    grid-template-rows: 1fr 5fr 1fr;
     justify-items: center;
     height: 370px;
     width: 100%;
@@ -20,6 +20,13 @@ body {
     margin: 4px;
     border: 0px;
     border-radius: 6px;
+}
+
+.col_side_container {
+    display: grid;
+    grid-template: 1fr 3fr 1fr;
+    justify-items: center;
+    width: 100%;
 }
 
 .upside {
@@ -66,3 +73,18 @@ body {
     border: 0px;
     border-radius: 6px;
 }
+
+@media (min-width: 600px) {
+    .container {
+        grid-template-rows: 1fr 3fr 1fr;
+    }
+    .col_side_container {
+        width: 90%;
+        grid-template-columns: 1fr 2fr 1fr;}
+    .col_container {
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: end;}
+    .column {
+        height: 40%;
+    }
+    }
